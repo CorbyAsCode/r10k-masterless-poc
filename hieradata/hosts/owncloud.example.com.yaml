@@ -9,13 +9,8 @@ classes:
   - owncloud
   - 'mysql::server'
 
-mysql::server:
-  override_options:
-    mysqld:
-      bind-address: '0.0.0.0'
-  restart: true,
-  root_password: 'Ecce+jtomug0'
+mysql::server::restart: true,
+mysql::server::root_password: 'Ecce+jtomug0'
 
-owncloud:
-  db_user: 'owncloud'
-  db_pass: 'if1Ge*uj+Ren0'
+owncloud::db_user: 'owncloud'
+owncloud::db_pass: 'if1Ge*uj+Ren0'

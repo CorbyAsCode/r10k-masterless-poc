@@ -1,6 +1,16 @@
 Masterless Puppet with r10k all-in-one
 ======================================
 
+Deprecated
+----------
+This was a Proof of Concept and I found it overly complicated for what it does.
+I replaced the r10k mechanism with librarian-puppet.
+
+See the new version of the masterless setup here:
+https://github.com/pgassmann/puppet-setup
+
+This one is left here for reference. It contains some mechanisms that could be useful in other scenarios.
+
 Why?
 ----
  * Small flexible system to puppetize servers for example in a home setup environment.
@@ -58,6 +68,8 @@ Issues and Ideas
 
  * The setup files, including the sshkey is deployed to the puppet environment by r10k, files are all world-readable because git only knows 644 or 755 as permission.
  * repository is checked out twice on the system.
- * Possible improvement: use local git repository as source for r10k
+ * Possible improvement: use local git repository as source for r10k. This works fine, just set remote in r10k.yaml to /root/r10k-masterless-poc. Then you can also remove the git-ssh wrapper.
  * Deployment process with r10k is complicated.
  * You could also just use r10k puppetfile install and then use this as source for puppet apply.
+
+I created a new version of this setup, eliminating most of the issues described here. See https://github.com/pgassmann/puppet-setup
