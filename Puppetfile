@@ -14,38 +14,46 @@
 forge 'http://localhost'
 
 ## A module from the Puppet Forge
-mod 'puppetlabs-stdlib',
-  :git => 'https://github.com/puppetlabs/puppetlabs-stdlib',
-  :ref => 'master'
+#mod 'puppetlabs-stdlib',
+#  :git => 'https://github.com/puppetlabs/puppetlabs-stdlib',
+#  :ref => 'master'
 
 ## Owncloud
-mod 'shoekstra/owncloud',
-  :git => 'https://github.com/shoekstra/puppet-owncloud.git',
-  :ref => 'master'
+#mod 'shoekstra/owncloud',
+#  :git => 'https://github.com/shoekstra/puppet-owncloud.git',
+#  :ref => 'master'
 
 ## owncloud dependencies:
 ## exclude conflicting and modules unnecessary on ubuntu
-exclusion 'ckhall-remi'
-exclusion 'stahnma-epel'
+#exclusion 'ckhall-remi'
+#exclusion 'stahnma-epel'
 
-mod 'puppetlabs-apache',
-  :git => 'https://github.com/puppetlabs/puppetlabs-apache.git',
-  :ref => 'master'
+#mod 'puppetlabs-apache',
+#  :git => 'https://github.com/puppetlabs/puppetlabs-apache.git',
+#  :ref => 'master'
 
-mod 'puppetlabs-apt',
-  :git => 'https://github.com/puppetlabs/puppetlabs-apt.git',
-  :ref => 'master'
+#mod 'puppetlabs-apt',
+#  :git => 'https://github.com/puppetlabs/puppetlabs-apt.git',
+#  :ref => 'master'
 
-mod 'puppetlabs-mysql' ,
-  :git => 'https://github.com/puppetlabs/puppetlabs-mysql.git',
-  :ref => 'master'
+#mod 'puppetlabs-mysql' ,
+#  :git => 'https://github.com/puppetlabs/puppetlabs-mysql.git',
+#  :ref => 'master'
 
-mod 'puppetlabs-concat',
-  :git => 'https://github.com/puppetlabs/puppetlabs-concat.git',
-  :ref => 'master'
+#mod 'puppetlabs-concat',
+#  :git => 'https://github.com/puppetlabs/puppetlabs-concat.git',
+#  :ref => 'master'
 
 ## alternative to nanliu-staging
-exclusion 'nanliu-staging'
-mod 'puppet-staging',
-  :git => 'https://github.com/puppet-community/puppet-staging.git',
+#exclusion 'nanliu-staging'
+#mod 'puppet-staging',
+#  :git => 'https://github.com/puppet-community/puppet-staging.git',
+#  :ref => 'master'
+
+mod 'happy',
+  :git => 'git@github.com:corbyshaner/puppet-happy.git',
+  :ref => 'master'
+
+mod 'sad',
+  :git => 'git@github.com:corbyshaner/puppet-sad.git',
   :ref => 'master'
