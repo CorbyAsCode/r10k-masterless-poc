@@ -13,11 +13,13 @@ cd $dir
   #bundle install --path=setup/bundle --binstubs=setup/bundlebin
 #fi
 rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
-yum install puppet -y
+#yum localinstall /var/tmp/ruby-1.9.3p545-1.el6.x86_64.rpm -y
+#yum install puppet -y
+gem install r10k
 
 # get environment from current git branch
-#environment=$(git symbolic-ref --short HEAD)
-environment=$1
+environment=$(git symbolic-ref --short HEAD)
+#environment=$1
 
 # ssh wrapper to use custom sshkey for git
 export GIT_SSH="${dir}/setup/git_ssh"
@@ -28,6 +30,6 @@ chmod 600 $dir/setup/.ssh/puppet_rsa
 # deploy Puppetmodules and hieradata
 # deploys from remote git repository!
 #setup/bundlebin/r10k deploy environment $environment
-
+r10k deploy environment $environment
 # Run Puppet
 #setup/bundlebin/puppet apply --modulepath=/etc/puppet/environments/$environment/modules --hiera_config=hiera.yaml --environment $environment site.pp $@
