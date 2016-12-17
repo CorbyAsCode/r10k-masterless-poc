@@ -5,7 +5,7 @@ set -e
 yum install centos-release-scl -y
 yum install ruby200-scldevel ruby200-ruby -y
 source /opt/rh/ruby200/enable
-gem install bundler
+gem install bundler --no-ri --no-rdoc
 bundle install --path=setup/bundle --binstubs=setup/bundlebin
 
 # Alternative method for installing gems
