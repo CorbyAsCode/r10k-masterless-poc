@@ -29,10 +29,10 @@ environment=$(git symbolic-ref HEAD | awk -F/ '{print $3}')
 #environment=$1
 
 # ssh wrapper to use custom sshkey for git
-export GIT_SSH="${dir}/setup/git_ssh"
+export GIT_SSH="setup/git_ssh"
 
 #fix permissions of ssh private key
-chmod 600 $dir/setup/.ssh/puppet_rsa
+chmod 600 setup/.ssh/puppet_rsa
 
 # deploy Puppetmodules and hieradata
 # deploys from remote git repository!
