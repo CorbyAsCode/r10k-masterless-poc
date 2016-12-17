@@ -12,7 +12,7 @@ cd $dir
   #gem install bundler
   #bundle install --path=setup/bundle --binstubs=setup/bundlebin
 #fi
-rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
 yum install puppet -y
 
 # get environment from current git branch
