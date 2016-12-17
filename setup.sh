@@ -16,8 +16,8 @@ bundle install --path=setup/bundle --binstubs=setup/bundlebin
 #gem install librarian-puppet --no-ri --no-rdoc
 #gem install r10k --no-ri --no-rdoc
 
-# Export the path to the gems that weren't installed using bundle
-#export PATH=/opt/rh/ruby200/root/usr/local/bin:$PATH
+# Export the path to bundler
+export PATH=/opt/rh/ruby200/root/usr/local/bin:$PATH
 
 # get environment from current git branch
 environment=$(git symbolic-ref HEAD | awk -F/ '{print $3}')
