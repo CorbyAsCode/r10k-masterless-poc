@@ -2,12 +2,19 @@
 set -x
 set -e
 
+# Install dependencies
 yum install centos-release-scl -y
 yum install ruby200-scldevel ruby200-ruby -y
 source /opt/rh/ruby200/enable
+
+# If your servers have Internet connectivity you can use gems.
+# If not you'll have to come up with an alternative method,
+# such as building your own RPMs.
 gem install bundler --no-ri --no-rdoc
 # Export the path to bundler
 export PATH=/opt/rh/ruby200/root/usr/local/bin:$PATH
+# Install ruby gems as specified in Gemfile into a new dir
+# in setup/bundle
 bundle install --path=setup/bundle --binstubs=setup/bundlebin
 
 # Alternative method for installing gems
